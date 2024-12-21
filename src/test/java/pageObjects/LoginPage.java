@@ -14,15 +14,15 @@ public class LoginPage {
 	PageFactory.initElements(rdriver, this);
 	}
 
-	@FindBy(id="session_key")
+	@FindBy(id="username")
 	@CacheLookup
 	WebElement txtEmail;
 
-	@FindBy(id="session_password")
+	@FindBy(id="password")
 	@CacheLookup
 	WebElement txtPassword;
 
-	@FindBy(className="sign-in-form__submit-button")
+	@FindBy(xpath="//*[@id=\"organic-div\"]/form/div[4]/button")
 	@CacheLookup
 	WebElement btnLogin;
 

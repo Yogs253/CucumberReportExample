@@ -1,4 +1,5 @@
-	package stepDefinitions;
+
+package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,10 +28,14 @@ public class Steps {
 	driver.get(url);
 	}
 
-	@When("User enters Email as {string} and Password as {string}")
-	public void user_enters_Email_as_and_Password_as(String email, String password){
-	lp.setUserName(email);
+	//@When("User enters Email as {string} and Password as {string}")
+	//@When("User enters Email as {string} and Password as {string}")
+	
+	@When("^User enters Email as (.+) and Password as (.+)$")
+	public void user_enters_Email_as_and_Password_as(String username, String password){
+	lp.setUserName(username);
 	lp.setPassword(password);
+	//throw new cucumber.api.PendingException();
 	}
 
 	@When("Click on Login")
