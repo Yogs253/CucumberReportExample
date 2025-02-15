@@ -14,6 +14,12 @@ public class LoginPage {
 	PageFactory.initElements(rdriver, this);
 	}
 
+	//"@CacheLookup" is an annotation used to instruct the framework to store a found web element 
+	//in memory after locating it for the first time, 
+	//this will allow for faster access when that element is referenced again in the test, 
+	//essentially caching the element to improve performance, 
+	//especially when dealing with static elements on a webpage that don't frequently change.
+	
 	@FindBy(id="username")
 	@CacheLookup
 	WebElement txtEmail;
