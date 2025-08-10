@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 	tags = {"@Regression"},
 	dryRun=false,
 	monochrome=true,
-	plugin= {"pretty","html:test-output/report.html"}
+	plugin= {"pretty","json:target/cucumber.json","html:test-output/report.html"}
 	)
 
 public class TestRun{
